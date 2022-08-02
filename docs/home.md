@@ -6,7 +6,6 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 permalink: /
 ---
 
-## Welcome to PSR docs
 ## Resume
 This tutorial intends to explain how to implement a new element in SDDP. There are some steps to follow for who will be present in the next sessions.
 
@@ -17,7 +16,7 @@ Following, are some sessions that explain important parts of SDDP code.
 ## Using a Module
 An important struct that is frequently used is `module`. A `module`, basically can be expanded as a struct that allows importing variables, subroutines, and classes that are declared in others places into the code. In the next example were imported some blocks that contain some subroutines that will be used following.
 
-```
+```Fortran
 module GerHydros
   use Factors
   use PSRClasses
@@ -28,7 +27,7 @@ end module GerHydros
 ## Creating a New Element
 The first step to creating a new Element is to implement a `type` (class). Then, in the class, we must declare some attributes and methods like in the following example:
 
-```
+```Fortran
 module GerHydros
   use <block name>
   type :: <class name>
@@ -40,7 +39,8 @@ end module GerHydros
 ```
 
 To optimize the way to work with data we used to declare attributes using pointers (explain why?). The attributes that are implemented depend on the information that will be used, following is an example to make it clear:
-```
+
+```Fortran
 module GerHydros
   use Factors
   use PSRClasses
@@ -76,7 +76,8 @@ As could be seen in the example behind, It's common to use as `contains` (method
 ## Declaring a method (function)
 ### Methods that use functions from another block of code
 Methods are functions that we declare as subroutines. Into the subroutine, it's possible to call factions from others blocks of code like is done in the sequent example:
-```
+
+```Fortran
 module GerHydros
   use Factors
   use PSRClasses
@@ -137,7 +138,7 @@ Should be noted that the subroutine is started with `contains` to indicate that 
 ### Methods that use routines to print messages on SDDP prompt
 Some methods ( principally evaluate ones) made some prints on the program prompt. To declare the message that should be printed, it needs to be written in consecutive files `sddppor.fmt`, `sddpesp.fmt` and `sddpeng.fmt`, the messages should be written in Portuguese, Spain, and English respectively. Following the example of routine messages in English.
 
-```
+```Fortran
 ***ROTINA: gerhid
 01 (' Erro: Unidade Geradora Hidro {}: codigo duplicado')
 02 (' Erro: Unidade Geradora Hidro {}: nome duplicado')
@@ -151,7 +152,7 @@ Some methods ( principally evaluate ones) made some prints on the program prompt
 ```
 Note that in the behind example 9 messages could be printed on the SDDP prompt, these messages are numbered from 01 to 09. The numbering is important because the numbers are used to correlate some occurrence with his respective message. The next example shows a method that prints messages on the prompt. Something important to note is the declared routine name in the first line of the example code (`***ROTINA: gerhid`).
 
-```
+```Fortran
     !------------------------------------------------------------------------------------------
     subroutine PSRGenHydro_validate(self,iper)
     !------------------------------------------------------------------------------------------
