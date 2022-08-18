@@ -1,8 +1,8 @@
-title: "Add a New Element in SDDP code"
+title: "SDDP project documentation"
 remote_theme: psrenergy/just-the-docs
 logo: assets/images/psr_logo.png
 
-psr_model: "PSR docs"
+psr_model: "SDDP docs"
 
 #adding zoom in images
 zoom_img_enabled: true
