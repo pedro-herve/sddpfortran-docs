@@ -4,17 +4,24 @@ nav_order: 2
 ---
 
 ## SDDP development environment set up
-This guide was created to teach how to install and compile the SDDP in for the first time.
-Prerequisites:
+This guide was created to teach how to install and compile the SDDP project for the first time.
 
+### Prerequisites
+
+- Accounts (with permission to clone SDDP)
+  - Github account
+  - BitBucket account
+
+- Files
+  - Working SmartGit license for development
+  - Xpress working license (xpauth.psr)
+  
+- Programs
+  - SmartGit
+  
 - Basic functionality such as: make and rm
-- Working SmartGit license for development
-- Github account
-- BitBucket account
-- Permissions to clone SDDP from BitBucket and Github
-- Xpress working license (xpauth.psr)
 
-Steps:
+### Step by step set up procedure:
 
 - Installation:
     - Install Microsoft Visual Studio Community 2022
